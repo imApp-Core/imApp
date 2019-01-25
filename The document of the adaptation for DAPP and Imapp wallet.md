@@ -35,6 +35,6 @@
 
 ##  DAPP will not change the process after adapting to the imApp through the above two changes. It only adds the watchword parameter to the scatter identify interface. The DAPP and imApp delivery timing diagram as following.
 
-<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp1_en.jpg" width=800 height=400 />  
+<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp1_en.jpg" width=800 height=350 />  
 
-<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp2_en.jpg" width=600 height=200 />
+<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp2_en.jpg" width=600 height=150 />
