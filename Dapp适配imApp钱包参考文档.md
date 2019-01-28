@@ -1,6 +1,6 @@
 # DAPP 适配到imApp钱包参考文档
 
-## 所有支持scatter web插件钱包的DAPP可以通过以下两点改动适配到imApp钱包.
+## 所有支持scatter web插件钱包的DAPP可以通过以下三点改动适配到imApp钱包
 
 #### （1）在identify接口中新增口令参数watchword。DAPP在identify的result中取出watchword， 如下DAPP获取授权结果代码:
 ```javascript
@@ -34,8 +34,20 @@
         "quantity": "0.1000 EOS",
         "memo": "[imapp2832F2B86F]"
       }
+#### （3）DAPP适配后，获取账户代币金额，需要访问imApp新增接口getBalance()
+```javascript
+例如：DAPP方需要获取当前账户(EOS/IQ/DICE)等代币余额，可按如下格式
+let balance = await ScatterJS.scatter.getBalance({"symbol" :JSON.stringify(["EOS","IQ","DICE"])})
+若返回成功，则balance=
+{
+  "EOS":"0.2300",
+  "IQ":"3542.0000",
+  "DICE":"99.2100"
+}
+```
 
-##  DAPP通过上述两点改动适配到imApp后不会改变原来流程，只是在scatter identify接口中增加了watchword参数，以下是DAPP 与 imApp部分交付时序图.
+
+##  DAPP通过上述三点改动适配到imApp后不会改变原来流程，只是在scatter identify接口中增加了watchword参数，以下是DAPP 与 imApp部分交付时序图.
 
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp1.png" width=800 height=400 />  
 
