@@ -46,7 +46,8 @@ let balance = await ScatterJS.scatter.getBalance({"symbol" :JSON.stringify(["eos
   "betdicetoken":"99.2100"
 }
 ```
-<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3.jpg" width=400 height=650 />
+<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3.jpg" width=400 height=650 />  
+
 ##  DAPP通过上述三点改动适配到imApp后不会改变原来流程，只是在scatter identify接口中增加了watchword参数，以下是DAPP 与 imApp部分交付时序图.
 
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp1.png" width=800 height=400 />  
