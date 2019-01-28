@@ -36,17 +36,17 @@
       }
 #### （3）DAPP适配后，获取账户代币金额，需要访问imApp新增接口getBalance()
 ```javascript
-例如：DAPP方需要获取当前账户(EOS/IQ/DICE)等代币余额，可按如下格式
-let balance = await ScatterJS.scatter.getBalance({"symbol" :JSON.stringify(["EOS","IQ","DICE"])})
+例如：DAPP方需要获取当前账户(EOS/FC/DICE)等代币余额，可按如下格式
+let balance = await ScatterJS.scatter.getBalance({"symbol" :JSON.stringify(["eosio.token","fcfundadmins","betdicetoken"])})
+//其中eosio.token、fcfundadmins、betdicetoken均为代币对应的合约账户名称
 若返回成功，则balance=
 {
-  "EOS":"0.2300",
-  "IQ":"3542.0000",
-  "DICE":"99.2100"
+  "eosio.token":"0.2300",
+  "fcfundadmins":"3542.0000",
+  "betdicetoken":"99.2100"
 }
 ```
-
-
+<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3.jpg" width=400 height=650 />
 ##  DAPP通过上述三点改动适配到imApp后不会改变原来流程，只是在scatter identify接口中增加了watchword参数，以下是DAPP 与 imApp部分交付时序图.
 
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp1.png" width=800 height=400 />  
