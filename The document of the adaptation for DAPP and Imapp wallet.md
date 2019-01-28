@@ -32,6 +32,19 @@
         "quantity": "0.1000 EOS",
         "memo": "[imapp2832F2B86F]"
       }
+#### (3) After DAPP is adapted, if account token amount is needed. You need to access the imApp new interface "getBalance()".
+```javascript
+ For example, the DAPP  needs to obtain the current account (EOS/FC/DICE) and other token balances, which can be returned in the following format
+let balance = await ScatterJS.scatter.getBalance({"symbol" :JSON.stringify(["eosio.token","fcfundadmins","betdicetoken"])})
+//Among them, eosio.token, fcfundadmins, and beticetoken are the contract account names corresponding to the token.
+ if Success, balance==
+{
+  "eosio.token":"0.2300",
+  "fcfundadmins":"3542.0000",
+  "betdicetoken":"99.2100"
+}
+```
+<img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3_en.png" width=400 height=650 />
 
 ##  DAPP will not change the process after adapting to the imApp through the above two changes. It only adds the watchword parameter to the scatter identify interface. The DAPP and imApp delivery timing diagram as following.
 
