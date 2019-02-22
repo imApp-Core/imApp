@@ -47,7 +47,7 @@ let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token","fcfu
 }
 ```
 
-#### （4）DAPP的EOS账号显示：用imApp口令替换原用的EOS账号。
+#### （4）DAPP的EOS账号显示：用imApp口令替换原有的EOS账号。
 
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3.jpg" width=400 height=650 />  
 
