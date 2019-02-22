@@ -46,6 +46,9 @@ let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token","fcfu
   "betdicetoken":"99.2100"
 }
 ```
+
+#### （4）DAPP的EOS账号显示：用imApp口令替换原用的EOS账号。
+
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3.jpg" width=400 height=650 />  
 
 ##  DAPP通过上述三点改动适配到imApp后不会改变原来流程，只是在scatter identify接口中增加了watchword参数，以下是DAPP 与 imApp部分交付时序图.
