@@ -37,13 +37,13 @@
 #### （3）DAPP适配后，获取账户代币金额，需要访问imApp新增接口getBalance()
 ```javascript
 例如：DAPP方需要获取当前账户(EOS/FC/DICE)等代币余额，可按如下格式
-let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token","fcfundadmins","betdicetoken"]})
-//其中eosio.token、fcfundadmins、betdicetoken均为代币对应的合约账户名称
+let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token-eos","fcfundadmins-fc","betdicetoken-dice"]})
+//其中eosio.token-eos、fcfundadmins-fc、betdicetoken-dice为代币对应的[合约账户名称-代币名称]
 若返回成功，则balance=
 {
-  "eosio.token":"0.2300",
-  "fcfundadmins":"3542.0000",
-  "betdicetoken":"99.2100"
+  "eosio.token-eos":"0.2300",
+  "fcfundadmins-fc":"3542.0000",
+  "betdicetoken-dice":"99.2100"
 }
 ```
 
