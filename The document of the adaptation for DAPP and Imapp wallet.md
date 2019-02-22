@@ -35,13 +35,13 @@
 #### (3) After DAPP is adapted, if account token amount is needed. You need to access the imApp new interface "getBalance()".
 ```javascript
  For example, the DAPP  needs to obtain the current account (EOS/FC/DICE) and other token balances, which can be returned in the following format
-let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token","fcfundadmins","betdicetoken"]})
-//Among them, eosio.token, fcfundadmins, and beticetoken are the contract account names corresponding to the token.
+let balance = await ScatterJS.scatter.getBalance({"symbol" :["eosio.token-eos","fcfundadmins-fc","betdicetoken-dice"]})
+//Among them, eosio.token-eos, fcfundadmins-fc, and beticetoken-dice are the [contract account name-token name] corresponding to the token.
  if Success, balance==
 {
-  "eosio.token":"0.2300",
-  "fcfundadmins":"3542.0000",
-  "betdicetoken":"99.2100"
+  "eosio.token-eos":"0.2300",
+  "fcfundadmins-fc":"3542.0000",
+  "betdicetoken-dice":"99.2100"
 }
 ```
 <img src="https://github.com/imApp-Core/imApp/blob/master/src/imapp3_en.png" width=400 height=650 />
